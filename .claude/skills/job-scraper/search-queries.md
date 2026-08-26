@@ -1,87 +1,72 @@
-# Search Queries for Job Scraper
+# Search Queries for Master Thesis & Internship Search
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+## Search Scope
 
-## Installed portal CLIs (primary for `/scrape`)
+Seek **paid, English-speaking, degree-integrated Master-thesis internships** for approximately March-August/September 2027. Prioritise Vienna, Austria first, then Germany and Switzerland, plus fully remote or hybrid opportunities where a meaningful company placement, supervision, and legal work arrangement are possible. On-site opportunities in those priority countries are acceptable.
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+The candidate is an Albanian citizen planning an Italian student residence permit for September 2026–September 2027. For placements outside Italy, do not assume work authorisation: surface the host-country permit requirement clearly.
 
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+## Opportunity Types
 
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+- Master thesis / thesis internship / graduate thesis / final-project internship
+- Internship explicitly compatible with a Master thesis
+- Working-student or research-assistant roles only when the timing and scope can become a thesis placement
+- Speculative company outreach to teams with a concrete, thesis-suitable technical problem
 
-## Search Sites
+## Priority 1: AI, LLMs, and Applied Machine Learning
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
-
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
-
-## Query Categories
-
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
-
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
+```text
+"master thesis" AI internship Germany English
+"master thesis" "large language models" internship Germany
+"thesis internship" "machine learning" Vienna Austria English
+"master thesis" AI Switzerland English
+"graduate thesis" AI automotive Germany
+"master thesis" AI aviation Germany
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
+## Priority 2: Software Engineering, Back-End Development, and System Design
 
-These match your domain expertise.
-
-```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
-```
-
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+```text
+"master thesis" "software engineering" Germany English
+"thesis internship" backend engineering Germany English
+"master thesis" "system design" Vienna Austria English
+"graduate thesis" "distributed systems" Switzerland English
+"master thesis" software automotive Germany
+"master thesis" software aviation Germany
 ```
 
-### Priority 4: Broader Technical / Consulting
+## Priority 3: Optimisation and Sustainable Systems
 
-Wider net for general technical roles.
-
+```text
+"master thesis" optimisation Germany English
+"thesis internship" optimisation Vienna Austria English
+"master thesis" "operations research" Switzerland English
+"master thesis" "systems engineering" automotive Germany
+"master thesis" "systems engineering" aviation Germany
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+
+## Priority 4: Employer and Remote Search
+
+```text
+site:jobs.* "master thesis" AI automotive Germany
+site:jobs.* "master thesis" software aviation Germany
+"master thesis internship" remote AI Europe
+"thesis internship" hybrid software engineering Europe English
 ```
 
-## Location Filter
+## Required Screening Checks
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Every result must be checked for:
 
-## Language Filter
+1. A paid placement or compensation sufficient to be viable.
+2. English as a stated working language; local-language requirements are a hard exclusion unless the candidate later confirms the required proficiency.
+3. A placement period compatible with 22–26 weeks from March 2027.
+4. A project capable of producing an individual, defensible 30-ECTS thesis. Applied technical assessments are eligible where they make a substantive technical contribution; assessment-only work is not.
+5. Adequate company mentor, data/tool access, and manageable confidentiality/IP conditions.
+6. Host-country internship/work authorisation for an Albanian citizen holding an Italian student residence permit.
 
-Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
+## Search Timing
 
-## Date Filter
-
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
-
-## Adapting Queries
-
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+- Begin company mapping and speculative outreach during M2S1 (September 2026–February 2027).
+- Start monitoring formal 2027 thesis/internship postings by October 2026 and intensify from November 2026 through February 2027.
+- Treat early 2027 deadlines as urgent; thesis approval and immigration can add lead time.

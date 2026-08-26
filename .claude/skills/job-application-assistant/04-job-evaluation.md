@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Java/Spring Boot backend development; RESTful APIs; Hibernate/JPA/JDBC; MySQL and Oracle PL/SQL; enterprise application work; Git, Docker, Linux, and CI/CD workflows; applied web delivery.
+**Moderate match areas:** Python/Flask/NumPy; React basic SPA development; WebSockets; AWS; systems foundations (OS, concurrency, networking); model training, ONNX, ROS2, Jetson Orin, Arduino, and PLC.
+**Weak match areas:** Any role requirement unsupported by the confirmed CV/profile. Never assume automotive, aviation, production, or research experience from target-sector preferences.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -74,9 +74,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Enterprise backend development; automotive software through the Volkswagen Group car-parts application; SAP ERP application support; database-backed application development.
+**Moderate:** Sustainable systems engineering; client website development; embedded AI and pose-estimation project work; systems / concurrency / networking coursework.
+**Entry-level:** Aviation and any other domain without confirmed direct experience.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +107,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Complete a paid, degree-integrated 30-ECTS Master-thesis internship around March–August/September 2027.
+- Produce an individual, applied thesis in AI/LLMs, optimisation, software engineering, back-end development, or systems design.
+- Build a technical career path through a strong position in automotive, aviation, or a similarly rigorous technical organisation.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: applied AI/LLM work, optimisation, back-end/software engineering, and logical systems-design problems.
+- Tasks that drain: assessment-only sustainability work and highly theoretical research without a practical implementation component. Technical assessment work remains acceptable when it has a clear applied thesis contribution.
+- Non-task factors: English-speaking environment, adequate company mentorship, individual thesis scope, access to data/tools, and approval-compatible confidentiality/IP terms.
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: paid placement is strongly preferred because it must cover living costs.
+- **Flexibility**: Vienna, Austria is the highest-priority city. Austria, Germany, Switzerland, and remote/hybrid are preferred; other locations only for exceptional opportunities. On-site roles in Austria, Germany, and Switzerland are acceptable. A non-Italian placement needs verified host-country work authorisation.
+- **Professional development**: practical technical depth, credible company/team, and a thesis that supports a post-graduation technical career.
 
 ### 6. Salary Benchmark (Optional)
 

@@ -1,91 +1,96 @@
-# Job Application Assistant for [YOUR_NAME]
+# Master Thesis & Internship Search Assistant
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
-1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
-2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
-3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
-4. **Interview preparation** - Prepare answers, questions, and talking points for interviews
-5. **Career strategy** - Advise on positioning and personal branding
+This repo is a Master-thesis internship workspace. It supports finding, evaluating, and applying for degree-integrated thesis placements, with particular attention to academic feasibility, supervision, and work authorisation.
 
 ## Candidate Profile
 
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Andri Halili
+- **Location:** Tirana, Albania until September 2026; Genoa, Italy from September 2026. Austria, Germany, Switzerland, or remote/hybrid preferred for the final placement.
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | Albanian | Mother tongue |
+  | English | C1 (TOEFL: 107) |
+  | French | B1 |
+  | Italian | A2 |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Erasmus Mundus Joint Master student
+- **Citizenship / residence context:** Albanian passport; Italian student visa/residence permit planned September 2026-September 2027. Confirm destination-country internship/work authorisation before applying outside Italy.
+- **LinkedIn:** https://www.linkedin.com/in/andri-h-835674351/
+- **GitHub:** https://github.com/andri-10 (personal); https://github.com/andri-lh (work account; private repositories)
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **European Master in Sustainable Systems Engineering (Erasmus Mundus Joint Master)** (2025-2027; expected graduation around September 2027) - UTC Compiegne, Polytechnic University of Tirana, and Universita degli Studi di Genova
+  - M2S1: University of Genoa, September 2026-February 2027
+  - Master thesis: degree-integrated internship, approximately March-August/September 2027; 30 ECTS; 22-26 weeks
+  - Topics: AI/LLMs, software engineering, back-end development, system design, and optimisation
+  - Academic results: 4.0/4.0 GPA in the UTC first semester; 9.4/10 GPA in the Tirana second semester
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Full Stack Developer** (September 2025 - Present) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
+  - Contribute to a Volkswagen Group car-parts application used by repair shops to identify vehicles by VIN and order parts.
+  - Develop and maintain Java Spring Boot backend services and RESTful APIs; collaborate on feature delivery, issue resolution, and backend performance.
+- **Backend Developer Intern (Java Spring Boot)** (March 2025 - August 2025) - **Lufthansa Industry Solutions**, Tirana, Albania (On-site)
+  - Developed Java Spring Boot backend services and RESTful APIs for internal enterprise applications.
+  - Designed and integrated MySQL data layers using Hibernate/JPA.
+- **SAP Application Support Engineer** (March 2023 - August 2025) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
+  - Supported SAP ERP users, managed OTRS ticket queues, documented issue resolution, and helped troubleshoot complex issues.
+- **Programming Instructor (C Language)** (2025) - **Plato.al**, Albania (Contract/Freelance, Remote)
+  - Designed a structured C programming course with practical exercises.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary interests:** AI/LLMs, software engineering, back-end development, system design, optimisation
+- **Backend:** Java, Spring Boot, REST APIs, Hibernate, JPA, JDBC, WebSockets; Python and Flask
+- **Databases:** MySQL, Oracle PL/SQL, SQLite
+- **DevOps and tools:** Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS
+- **Web:** HTML, CSS, JavaScript, React (basic SPA development), PHP
+- **Systems / ML:** OS fundamentals, OpenMP, MPI, TCP/IP, HTTP, UDP, NumPy, model training, ONNX, ROS2, Jetson Orin, Arduino, PLC
+- **Verified delivery experience:** Volkswagen Group automotive application; four private-client websites with CMS and Resend email functionality; warehouse, gym-membership, Micro:bit quiz, embedded pose-estimation, and Oracle database projects
+- **Target domains:** Automotive, aviation, and other strong applied technical environments
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **ITIL 4 Foundation Certificate in IT Service Management** - PeopleCert, 2025
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- No publications confirmed yet.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Academic results: 4.0/4.0 GPA in the UTC first semester; 9.4/10 GPA in the Tirana second semester.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+Pending candidate self-assessment or CV/LinkedIn evidence.
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Applied AI, optimisation, and software/system-design problems
+- A thesis with a clear technical contribution rather than assessment-only or highly theoretical research
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Automotive and aviation are preferred
+- Otherwise open to strong AI-intensive software and systems-engineering organisations
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- English must be the working language
+- Unpaid placements are strongly disfavoured because the placement must cover living costs
+- A placement outside Italy requires verified work authorisation
+- A company project must be compatible with individual thesis examination and defence
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
