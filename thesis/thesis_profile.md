@@ -23,10 +23,10 @@ Secure a paid, English-speaking, degree-integrated Master-thesis internship for 
 ## Verified Technical Foundation
 
 - **Professional backend work:** Java Spring Boot, REST APIs, Hibernate/JPA/JDBC, MySQL; current work on a Volkswagen Group car-parts application.
-- **Software and platform tools:** Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS, WebSockets.
-- **Data and web:** Oracle PL/SQL, MySQL, SQLite, Python/Flask/NumPy, HTML/CSS/JavaScript, basic React SPA development, PHP.
+- **Software and platform tools:** Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS, WebSockets; OpenAI Codex, GitHub Copilot, and agent skills/workflows for AI-assisted development.
+- **Data and web:** Oracle PL/SQL, MySQL, MongoDB, SQLite, Python/Flask/NumPy, HTML/CSS/JavaScript/TypeScript, basic React SPA development, PHP.
 - **Systems and AI:** OS, concurrency (OpenMP, MPI), networking (TCP/IP, HTTP, UDP), model training, ONNX, ROS2, Jetson Orin, Arduino, PLC.
-- **Relevant projects:** warehouse management backend; gym membership backend; Micro:bit interactive-learning thesis; embedded 3D pose estimation; Oracle car-parking database.
+- **Relevant projects:** warehouse management backend; gym membership backend; Micro:bit interactive-learning thesis; embedded 3D pose estimation; Oracle car-parking database; Pilates Studio website (bstudio.al); Café and Brunch website (joicafe.de).
 
 ## Evidence of Academic Strength
 

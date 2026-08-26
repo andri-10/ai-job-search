@@ -55,11 +55,12 @@ This repo is a Master-thesis internship workspace. It supports finding, evaluati
 ### Technical Skills
 - **Primary interests:** AI/LLMs, software engineering, back-end development, system design, optimisation
 - **Backend:** Java, Spring Boot, REST APIs, Hibernate, JPA, JDBC, WebSockets; Python and Flask
-- **Databases:** MySQL, Oracle PL/SQL, SQLite
+- **Databases:** MySQL, MongoDB, Oracle PL/SQL, SQLite
 - **DevOps and tools:** Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS
-- **Web:** HTML, CSS, JavaScript, React (basic SPA development), PHP
+- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), PHP
 - **Systems / ML:** OS fundamentals, OpenMP, MPI, TCP/IP, HTTP, UDP, NumPy, model training, ONNX, ROS2, Jetson Orin, Arduino, PLC
-- **Verified delivery experience:** Volkswagen Group automotive application; four private-client websites with CMS and Resend email functionality; warehouse, gym-membership, Micro:bit quiz, embedded pose-estimation, and Oracle database projects
+- **AI-assisted development:** OpenAI Codex, GitHub Copilot, agent skills/workflows, AI-supported research and implementation
+- **Verified delivery experience:** Volkswagen Group automotive application; Pilates Studio website (bstudio.al: responsive pages, services, reservations, contact); Café and Brunch website (joicafe.de: responsive reservations, category-based menu, animations, photos, contact); warehouse, gym-membership, Micro:bit quiz, embedded pose-estimation, and Oracle database projects
 - **Target domains:** Automotive, aviation, and other strong applied technical environments
 
 ### Certifications

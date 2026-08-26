@@ -92,10 +92,11 @@ Albania | Contract/Freelance, Remote
 
 ## Independent Projects
 
-### Client Website Development (private clients)
-- Developed and maintained four fully functional websites for private clients in fitness, gastronomy, law, and car rental.
-- Delivered content-management functionality for administrators/owners and transactional email functionality using Resend.
-- Technologies, project dates, individual technical contributions, and public URLs: to be confirmed from the CV/portfolio before inclusion in application documents.
+### Client Website Development (freelance)
+- **Pilates Studio Website** - https://bstudio.al
+  - Delivered a responsive, multi-page business website covering services, reservations, and contact flows.
+- **Café and Brunch Website** - https://joicafe.de
+  - Delivered a responsive business website with reservations, a category-based menu, animations, photo content, and contact flows.
 
 ### Warehouse Management System - Spring Boot Backend
 https://github.com/andri-10/warehouse
@@ -122,8 +123,8 @@ https://github.com/andri-10/parking-database
 ### Programming & ML
 - **Java:** Spring Boot, REST APIs, Hibernate, JPA, JDBC.
 - **Python:** Flask, NumPy.
-- **Web:** HTML, CSS, JavaScript, React (basic SPA development), PHP, WebSockets.
-- **Databases:** MySQL; Oracle PL/SQL (DDL, DML, triggers, procedures); SQLite.
+- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), PHP, WebSockets.
+- **Databases:** MySQL, MongoDB; Oracle PL/SQL (DDL, DML, triggers, procedures); SQLite.
 - **ML and embedded systems:** NumPy, model training, ONNX, performance evaluation, ROS2, Jetson Orin, Arduino, PLC.
 
 ### Domain Expertise
@@ -134,6 +135,7 @@ https://github.com/andri-10/parking-database
 
 ### Software & Tools
 - Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS.
+- AI-assisted development: OpenAI Codex, GitHub Copilot, agent skills/workflows, AI-supported research and implementation.
 - System engineering foundations: operating systems, concurrency (OpenMP, MPI), and networking fundamentals (TCP/IP, HTTP, UDP).
 
 ## Certifications

@@ -60,8 +60,8 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** Java/Spring Boot backend development; RESTful APIs; Hibernate/JPA/JDBC; MySQL and Oracle PL/SQL; enterprise application work; Git, Docker, Linux, and CI/CD workflows; applied web delivery.
-**Moderate match areas:** Python/Flask/NumPy; React basic SPA development; WebSockets; AWS; systems foundations (OS, concurrency, networking); model training, ONNX, ROS2, Jetson Orin, Arduino, and PLC.
+**Strong match areas:** Java/Spring Boot backend development; RESTful APIs; Hibernate/JPA/JDBC; MySQL, MongoDB, and Oracle PL/SQL; enterprise application work; Git, Docker, Linux, and CI/CD workflows; applied web delivery.
+**Moderate match areas:** Python/Flask/NumPy; TypeScript; React basic SPA development; WebSockets; AWS; AI-assisted development with OpenAI Codex, GitHub Copilot, and agent workflows; systems foundations (OS, concurrency, networking); model training, ONNX, ROS2, Jetson Orin, Arduino, and PLC.
 **Weak match areas:** Any role requirement unsupported by the confirmed CV/profile. Never assume automotive, aviation, production, or research experience from target-sector preferences.
 
 ### 2. Experience Match (0-100)
@@ -75,7 +75,7 @@ Does work history align with what they're looking for?
 | 0-39 | Unrelated experience |
 
 **Strong:** Enterprise backend development; automotive software through the Volkswagen Group car-parts application; SAP ERP application support; database-backed application development.
-**Moderate:** Sustainable systems engineering; client website development; embedded AI and pose-estimation project work; systems / concurrency / networking coursework.
+**Moderate:** Sustainable systems engineering; client website delivery for bstudio.al and joicafe.de; embedded AI and pose-estimation project work; systems / concurrency / networking coursework.
 **Entry-level:** Aviation and any other domain without confirmed direct experience.
 
 ### 3. Behavioral/Culture Fit (0-100)

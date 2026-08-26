@@ -1,169 +1,105 @@
-%% Example CV - [YOUR_NAME]
-%% Comprehensive overview of all competencies, experience, and achievements.
-%% Use as a master reference when tailoring role-specific CVs.
-%%
-%% SETUP: Run /setup to populate this with your actual information.
-%% Compile with: lualatex main_example.tex
-%% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
+%% Master CV for Andri Halili
+%% Tailor this file for a specific thesis placement by copying it to
+%% main_<company>_<role>.tex and adapting the profile and skill emphasis.
+%% Compile with: lualatex -interaction=nonstopmode main_example.tex
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
 \renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{needspace}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
-    pdfpagemode=FullScreen,
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdftitle={Andri Halili - Master Thesis CV}
 }
 \usepackage[scale=0.80]{geometry}
-\usepackage{import}
 
-% personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Andri}{Halili}
+\email{a.halili2004@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/andri-h-835674351/}{LinkedIn} \enspace|\enspace \href{https://github.com/andri-10}{github.com/andri-10}}
 
 \begin{document}
-
 \makecvtitle
 
-% ============================================================
-%     PROFILE STATEMENT
-% ============================================================
-
-\vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
-
-% ============================================================
-%     CORE COMPETENCIES
-% ============================================================
+\vspace{-8pt}
+\small{Software Engineer and Erasmus Mundus Master's student with enterprise experience at Lufthansa Industry Solutions. I develop Java/Spring Boot backend services for a Volkswagen Group car-parts platform, with practical experience in REST APIs, JPA/Hibernate, SQL, AWS deployments, CI/CD troubleshooting, and Agile delivery. Seeking a paid, English-speaking industrial Master's thesis from March 2027 in applied AI, backend/cloud software, distributed systems, automotive, aviation, or sustainable systems engineering.}
 
 \section{Core Competencies}
 \vspace{1pt}
 \begin{itemize}
-
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
-
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
-
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
-
+  \item \textbf{Backend engineering:} Java, Spring Boot, REST APIs, JDBC, JPA/Hibernate, Spring Data JPA, WebSockets, Maven, JUnit/Mockito, and Swagger.
+  \item \textbf{Cloud and delivery:} AWS deployments, Docker, GitHub Actions/CI/CD, Git, Linux (Ubuntu), Agile/Scrum delivery; Kubernetes fundamentals.
+  \item \textbf{Data and systems:} MySQL, MongoDB, Oracle SQL/PL-SQL, SQLite, relational modelling, procedures/triggers; TCP/IP, HTTP/UDP, OpenMP and MPI foundations.
+  \item \textbf{Applied AI and embedded systems:} Python, Flask, NumPy, model training/evaluation, ONNX deployment, ROS2, Jetson Orin, Arduino, and PLC.
+  \item \textbf{Web development:} JavaScript, TypeScript, HTML/CSS, React, Angular working exposure, and PHP.
+  \item \textbf{AI-assisted development:} OpenAI Codex, GitHub Copilot, agent skills/workflows, and AI-supported research and implementation.
 \end{itemize}
-
-% ============================================================
-%     PROFESSIONAL EXPERIENCE
-% ============================================================
-
-\section{Professional Experience}
-\vspace{3pt}
-\begin{itemize}
-
-% --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
-\end{itemize}}}
-
-\vspace{3pt}
-
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-\end{itemize}}}
-
-\vspace{3pt}
-
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-\end{itemize}}}
-
-\end{itemize}
-
-% ============================================================
-%     EDUCATION
-% ============================================================
 
 \section{Education}
 \vspace{1pt}
 \begin{itemize}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
-
+  \needspace{6\baselineskip}
+  \item{\cventry{Sep 2025 - Sep 2027}{European Master in Sustainable Systems Engineering (Erasmus Mundus)}{Multi-university mobility programme}{France, Albania, Italy}{}{\vspace{1pt}
+    In progress, expected Sep 2027.\\
+    \textbf{M1S1 - Universit\'e de Technologie de Compi\`egne, France:} 9/9 graded courses at A, the maximum grade.\\
+    \textbf{M1S2 - Polytechnic University of Tirana, Albania:} GPA 9.3/10.\\
+    \textbf{M2S1 - University of Genoa, Italy:} Sep 2026-Jan 2027.\\
+    \textbf{M2S2 - Industrial internship and individual Master's thesis:} planned Feb/Mar-Sep 2027.}}
+  \vspace{2pt}
+  \needspace{5\baselineskip}
+  \item{\cventry{Oct 2022 - Jul 2025}{Bachelor of Engineering in Computer Engineering}{Polytechnic University of Tirana}{Tirana, Albania}{}{\vspace{1pt}
+    Final GPA: 9.7/10. Thesis: \emph{Intelligent Motion-Based Quiz System Using Micro:bit and PDF Document Processing}.}}
 \end{itemize}
 
-% ============================================================
-%     LANGUAGES
-% ============================================================
-
-\section{Languages}
+\section{Professional Experience}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+  \needspace{7\baselineskip}
+  \item{\cventry{Mar 2026 - Present}{Software Engineer}{Lufthansa Industry Solutions}{Tirana, Albania}{}{\vspace{1pt}
+    \begin{itemize}
+      \item Implement backend feature and bug stories in two-week sprints for a Volkswagen Group car-parts platform used by repair shops to identify vehicles by VIN and order parts.
+      \item Develop and maintain Java/Spring Boot services and REST APIs, including persistence and database-layer work.
+      \item Troubleshoot GitHub Actions workflows, deploy changes on AWS, validate database connections, and coordinate changes with frontend developers.
+      \item Contribute in Scrum ceremonies, architecture sessions, sprint reviews, and solution proposals before implementation.
+    \end{itemize}}}
+  \vspace{2pt}
+  \needspace{6\baselineskip}
+  \item{\cventry{May 2023 - Mar 2026}{SAP Application Support Engineer}{Lufthansa Industry Solutions}{Tirana, Albania}{}{\vspace{1pt}
+    \begin{itemize}
+      \item Supported enterprise SAP applications for Lufthansa-related accounts, including user maintenance, access administration, and incident resolution through ticketing systems.
+      \item Worked with OTRS and operational support processes; documented resolutions, collaborated across teams, and supported onboarding and recurring account-maintenance activities.
+    \end{itemize}}}
+  \vspace{2pt}
+  \needspace{5\baselineskip}
+  \item{\cventry{Jul 2025 - Sep 2025}{Internal Java Internship}{Lufthansa Industry Solutions}{Tirana, Albania}{}{\vspace{1pt}
+    Completed an after-hours enterprise Java curriculum alongside the SAP role, covering OOP, JDBC, JPA/Hibernate, Spring/Spring Boot, REST services, Spring Security, testing, Docker/Kubernetes, and cloud fundamentals.}}
+  \vspace{2pt}
+  \item{\cventry{2025}{Programming Instructor (C)}{Plato.al}{Remote}{}{Designed and delivered a structured C programming course with lessons and practical exercises covering core programming concepts.}}
 \end{itemize}
 
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
+\section{Selected Technical Projects}
 \vspace{1pt}
 \begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
+  \item \textbf{\href{https://bstudio.al}{Pilates Studio Website}:} Delivered a responsive, multi-page business website covering services, reservations, and contact flows.
+  \item \textbf{\href{https://joicafe.de}{Café and Brunch Website}:} Delivered a responsive website with reservations, a category-based menu, animations, photo content, and contact flows.
+  \item \textbf{\href{https://github.com/andri-10/lidar_pose_estimation}{3D Pose Estimation System with Embedded AI}:} Built a real-time pose-estimation system on NVIDIA Jetson Orin Nano using deep-learning models, ONNX deployment, and performance evaluation.
+  \item \textbf{\href{https://github.com/andri-10/interactive-learning-thesis}{Intelligent Motion-Based Quiz System}:} Designed a full-stack interactive learning system integrating Micro:bit motion sensors with PDF-based quiz navigation and document processing.
+  \item \textbf{\href{https://github.com/andri-10/warehouse}{Warehouse Management System}:} Built a Java/Spring Boot backend with REST APIs, Hibernate/JPA, MySQL, and a layered enterprise-style architecture.
 \end{itemize}
 
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
+\section{Languages and Certification}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
-\end{itemize}
-
-% ============================================================
-%     REFERENCES
-% ============================================================
-
-\section{References}
-\vspace{1pt}
-\begin{itemize}
-\item{Available upon request.}
+  \item \textbf{Languages:} Albanian (native), English (C1, TOEFL 107), French (B1), Italian (A2).
+  \item \textbf{Certification:} ITIL\textsuperscript{\textregistered} 4 Foundation Certificate in IT Service Management, PeopleCert (2025).
 \end{itemize}
 
 \end{document}
