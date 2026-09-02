@@ -58,11 +58,11 @@ If this fails (bun not installed), skip to **1c (WebSearch fallback)** for all p
 
 #### 1b. Run CLI tools (primary — run these in parallel where possible)
 
-Discover all installed portal CLI skills by reading every `SKILL.md` found under `.agents/skills/*/SKILL.md`. Each file documents that portal's exact CLI flags and usage examples. **Use each portal's own documented interface — do not guess flags.** This approach automatically includes any new portals added via `/add-portal` without requiring changes to this file.
+Discover all installed portal-search skills by reading every `SKILL.md` found under `.agents/skills/*/SKILL.md`. Each file documents whether its source has a CLI or is browser-assisted, along with its supported interface. **Use each portal's documented interface — do not guess flags.** This approach automatically includes any new portals added via `/add-portal` without requiring changes to this file.
 
 **Honor the `enabled` toggle.** A portal is enabled unless its `SKILL.md` frontmatter sets `enabled: false` (a missing key means enabled — the default). Skip each disabled portal and record it for the Step 5 summary. A fork can thus keep a portal installed but sit out a run without deleting its directory.
 
-For each **enabled** portal skill:
+For each **enabled CLI** portal skill:
 
 1. Read its `SKILL.md` to find the correct `bun run …` invocation and supported flags.
 2. Translate the query terms from `search-queries.md` into that portal's flag format (e.g. `--key`, `--search-string`, `--query`, filter codes — whatever the portal's SKILL.md specifies).
@@ -73,6 +73,11 @@ For each **enabled** portal skill:
 Run all portal CLI calls in parallel where possible using the Agent tool. Collect all `results` arrays into a single pool for Step 2, keeping each result tagged with its source portal skill (for Step 2 `detail` lookups).
 
 If a CLI tool exits with a non-zero code, log the error message and continue — do not abort the whole search.
+
+**Browser-assisted sources.** A skill that explicitly says browser-assisted/manual and
+does not document a CLI is not a failed CLI and must not be invoked from this automated
+step. Surface it as available for a focused interactive search when its country or
+portal is requested; respect any no-automation constraint in that skill.
 
 #### 1c. WebSearch fallback
 
