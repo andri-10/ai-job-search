@@ -1,7 +1,7 @@
 # freehire-cli
 
-CLI for searching the [freehire.me](https://freehire.me) job aggregator across
-**many markets** (tech-focused), via its public JSON API.
+CLI for searching [freehire.me](https://freehire.me) for this workspace's
+Master-thesis and technical internship opportunities, via its public JSON API.
 
 **Data source**: freehire.me REST API (`/api/v1/agent/jobs/search`, `/api/v1/jobs/facets`, `/api/v1/jobs/{slug}`).
 **Authentication**: None required — reads are public (only tracking mutations need a key, and those are out of scope here).
@@ -49,17 +49,27 @@ posting's **full** description (Markdown by default, `--description-format
 text|html` to change it). `detail` remains for looking a single posting up by
 slug — including a closed one, which search does not return.
 
+## Thesis-search preset
+
+Use `--thesis` for the repository's conservative default search window: the last
+14 days, up to 12 results, and `eu,none` as the region filter. The `none` value
+retains remote or unresolved-location results for manual location review. It does
+not encode the candidate's countries, language, visa status, or role priorities;
+those remain in [`../../../CLAUDE.md`](../../../CLAUDE.md) and
+[`../../../.claude/skills/job-scraper/search-queries.md`](../../../.claude/skills/job-scraper/search-queries.md).
+Explicit `--jobage`, `--limit`, and `--region` flags override the preset.
+
 ## Quick examples
 
 ```bash
-# Senior backend roles, table view
-bun run src/cli.ts search -q "backend engineer" --seniority senior --limit 10 --format table
+# Applied ML or computer-vision placements in the personal thesis scope
+bun run src/cli.ts search --thesis -q "machine learning internship" --category ml_ai --format table
 
-# Remote React roles in the EU
-bun run src/cli.ts search -q "react" --remote remote --region eu --format table
+# Software or systems placements in priority markets
+bun run src/cli.ts search --thesis -q "software engineering internship" --country AT,DE,CH --format table
 
-# DevOps roles in Germany posted in the last 14 days
-bun run src/cli.ts search --category devops --country DE --jobage 14 --format table
+# Thesis-compatible embedded systems work
+bun run src/cli.ts search --thesis -q "embedded systems internship" --format table
 
 # Full detail for one job (slug from a search result's id)
 bun run src/cli.ts detail golang-zensar-2bxu6dxm --format plain
@@ -86,8 +96,13 @@ See `../SKILL.md` for the full flag reference and the hosted-dependency note.
 | `--facet` | | Any other facet as `key=value` (repeatable). |
 | `--format` | | `json` \| `table` \| `plain`. |
 | `--description-format` | | `markdown` (default) \| `text` \| `html` — how each result's full description is rendered (`json` output only). |
+| `--thesis` | | Apply the workspace thesis defaults unless the corresponding flags are explicitly set. |
 
-Facet values come from freehire's controlled vocabularies. Discover the live
+Facet values come from Freehire's controlled vocabularies. Discover the live
 values (with counts) for a market at
 [`/api/v1/jobs/facets`](https://freehire.me/api/v1/jobs/facets), or narrow it,
 e.g. `https://freehire.me/api/v1/jobs/facets?q=react`.
+
+Before presenting, tracking, or applying to a result, use the direct employer
+ATS/careers URL rather than an aggregator redirect. See [`../SKILL.md`](../SKILL.md)
+for the required screening workflow.

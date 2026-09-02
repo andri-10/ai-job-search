@@ -41,6 +41,16 @@ describe("freehire CLI flag validation", () => {
     });
   });
 
+  describe("--format validation", () => {
+    test("an unsupported format exits 1 with BAD_ARG before a network call", async () => {
+      const result = await runCLI(["search", "--format", "spreadsheet"]);
+      expect(result.exitCode).not.toBe(0);
+      const err = parsedStderr(result.stderr);
+      expect(err.code).toBe("BAD_ARG");
+      expect(err.error).toMatch(/--format/);
+    });
+  });
+
   describe("--facet validation", () => {
     test("a facet without '=' exits 1 with BAD_ARG", async () => {
       const result = await runCLI(["search", "--facet", "novalue"]);

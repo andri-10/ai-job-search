@@ -12,7 +12,7 @@ This repo is a Master-thesis internship workspace. It supports finding, evaluati
 
 ### Identity
 - **Name:** Andri Halili
-- **Location:** Tirana, Albania until September 2026; Genoa, Italy from September 2026. Austria, Germany, Switzerland, or remote/hybrid preferred for the final placement.
+- **Location:** Tirana, Albania until September 2026; Genoa, Italy from September 2026. Austria, Germany, and Switzerland remain first priority for the final placement. Secondary opportunity markets are the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway, plus remote/hybrid roles where legally and academically viable.
 - **Languages:**
   | Language | Level |
   |----------|-------|
@@ -90,7 +90,7 @@ Pending candidate self-assessment or CV/LinkedIn evidence.
 automatically from your Languages table above - don't duplicate them here. -->
 - English must be the working language
 - Unpaid placements are strongly disfavoured because the placement must cover living costs
-- A placement outside Italy requires verified work authorisation
+- A placement outside Italy requires verified host-country internship/work authorisation
 - A company project must be compatible with individual thesis examination and defence
 
 ## Repo Structure

@@ -4,6 +4,10 @@ The endpoints, parameters, and response shapes this skill depends on. This is th
 file to update if the freehire API changes. Base URL defaults to
 `https://freehire.me` and is overridable via the `FREEHIRE_API_URL` env var.
 
+This reference documents API behaviour only. Personal thesis scope, screening,
+and candidate requirements belong in [`../../CLAUDE.md`](../../CLAUDE.md) and
+[`../../.claude/skills/job-scraper/search-queries.md`](../../.claude/skills/job-scraper/search-queries.md), not in this API reference.
+
 ## Authentication
 
 None for reads. `GET /api/v1/jobs/*` and `/companies/*` are public; only per-user
@@ -44,6 +48,10 @@ Two extra parameters control it:
 |-------|------------------|-------|
 | `include_description` | (always `true`) | Without it the endpoint serves the index preview, same as the web search. |
 | `description_format` | `--description-format` | `markdown` (the skill's default), `text`, or `html`. **An unrecognized value is not an error** — the API falls back to `html`, so the CLI validates the flag itself. |
+
+`--thesis` is a local CLI preset, not an API parameter. It supplies defaults only
+when its corresponding CLI flags are absent: `posted_within_days=14`, `limit=12`,
+and repeated `regions=eu&regions=none`.
 
 Hydration is best-effort per hit: a result whose row has vanished from the database
 (the index lagging a just-removed job) keeps the preview rather than being dropped,

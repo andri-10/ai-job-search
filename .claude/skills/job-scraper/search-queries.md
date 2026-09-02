@@ -2,7 +2,7 @@
 
 ## Search Scope
 
-Seek **paid, English-speaking, degree-integrated Master-thesis internships** for approximately March-August/September 2027. Prioritise Vienna, Austria first, then Germany and Switzerland, plus fully remote or hybrid opportunities where a meaningful company placement, supervision, and legal work arrangement are possible. On-site opportunities in those priority countries are acceptable.
+Seek **paid, English-speaking, degree-integrated Master-thesis internships** for approximately March-August/September 2027. Prioritise Vienna, Austria first, then Germany and Switzerland. Also search the approved secondary markets: the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway, plus fully remote or hybrid opportunities where a meaningful company placement, supervision, and legal work arrangement are possible. On-site opportunities in these markets are acceptable.
 
 The candidate is an Albanian citizen planning an Italian student residence permit for September 2026–September 2027. For placements outside Italy, do not assume work authorisation: surface the host-country permit requirement clearly.
 
@@ -52,6 +52,20 @@ site:jobs.* "master thesis" AI automotive Germany
 site:jobs.* "master thesis" software aviation Germany
 "master thesis internship" remote AI Europe
 "thesis internship" hybrid software engineering Europe English
+```
+
+## Priority 5: Secondary European Markets
+
+```text
+"master thesis" AI internship Netherlands English
+"master thesis" software engineering Netherlands English
+"master thesis" AI internship France English
+"stage de fin d'études" AI internship France English
+"master thesis" software internship Italy English
+"master thesis" AI internship Sweden English
+"master thesis" software engineering Finland English
+"master thesis" internship Luxembourg English
+"master thesis" AI internship Norway English
 ```
 
 ## Required Screening Checks

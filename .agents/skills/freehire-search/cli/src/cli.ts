@@ -19,6 +19,17 @@ interface Flags {
 // Short-flag aliases.
 const ALIAS: Record<string, string> = { q: "query", n: "limit" }
 
+/**
+ * Conservative defaults for this workspace's Master-thesis search. The
+ * candidate profile and exact target markets remain canonical Markdown; this
+ * preset contains only portable search mechanics. Explicit flags always win.
+ */
+const THESIS_DEFAULTS = {
+  jobage: 14,
+  limit: 12,
+  regions: ["eu", "none"],
+} as const
+
 function parseFlags(argv: string[]): Flags {
   const flags: Flags = { _: [] }
   for (let i = 0; i < argv.length; i++) {
@@ -69,7 +80,7 @@ function commaList(raw: FlagValue): string[] {
     .filter(Boolean)
 }
 
-const HELP = `freehire-cli — search the freehire.me job aggregator (many markets, tech-focused)
+const HELP = `freehire-cli — search Freehire for Master-thesis and technical internships
 
 USAGE
   bun run src/cli.ts search [-q "<keywords>"] [facet flags] [--format json|table|plain]
@@ -83,9 +94,11 @@ SEARCH FLAGS
   --format <fmt>          json (default) | table | plain.
   --description-format    markdown (default) | text | html — how each result's
                           full description is rendered (json output only).
+  --thesis                Apply thesis defaults: 14 days, 12 results, and eu,none
+                          when those flags are not explicitly set.
 
 FACET FILTERS (values from freehire.me's controlled vocabularies; comma = OR)
-  --region <codes>        Macro-region: global, eu, us, apac, latam, cis, ...  e.g. --region eu,us
+  --region <codes>        Macro-region: global, eu, us, apac, latam, cis, ...  e.g. --region eu,none
   --country <codes>       ISO-3166 alpha-2, e.g. --country DE,GB
   --city <names>          City name(s), e.g. --city Berlin
   --seniority <levels>    junior, middle, senior, staff, principal, lead, ...
@@ -100,9 +113,9 @@ DETAIL
                           or a full https://freehire.me/jobs/<slug> URL.
 
 EXAMPLES
-  bun run src/cli.ts search -q "backend engineer" --seniority senior --limit 10 --format table
-  bun run src/cli.ts search -q "react" --remote remote --region eu --format table
-  bun run src/cli.ts search --category devops --country DE --jobage 14 --format table
+  bun run src/cli.ts search --thesis -q "machine learning internship" --category ml_ai --format table
+  bun run src/cli.ts search --thesis -q "software engineering internship" --country AT,DE,CH --format table
+  bun run src/cli.ts search --thesis -q "embedded systems internship" --format table
   bun run src/cli.ts detail golang-zensar-2bxu6dxm --format plain
 
 Reads are public (no API key). Source: ${baseUrl()} — a personal project,
@@ -130,6 +143,10 @@ async function main(): Promise<number> {
 
   if (cmd === "search") {
     const fmt = (flags.format as string) || "json"
+    if (!["json", "table", "plain"].includes(fmt)) {
+      process.stderr.write(JSON.stringify({ error: `--format must be json, table, or plain, got "${fmt}"`, code: "BAD_ARG" }) + "\n")
+      return 1
+    }
 
     // Validated here rather than server-side: the API answers an unrecognized
     // format with raw HTML instead of an error, so a typo would silently change
@@ -167,12 +184,12 @@ async function main(): Promise<number> {
 
     const opts: SearchOpts = {
       query: stringFlag(flags.query),
-      jobage: flags.jobage ? parseInt(flags.jobage as string, 10) : 9999,
+      jobage: flags.jobage ? parseInt(flags.jobage as string, 10) : flags.thesis ? THESIS_DEFAULTS.jobage : 9999,
       page: flags.page ? Math.max(1, parseInt(flags.page as string, 10)) : 1,
-      limit: flags.limit ? Math.max(1, parseInt(flags.limit as string, 10)) : 25,
-      format: (["json", "table", "plain"].includes(fmt) ? fmt : "json") as SearchOpts["format"],
+      limit: flags.limit ? Math.max(1, parseInt(flags.limit as string, 10)) : flags.thesis ? THESIS_DEFAULTS.limit : 25,
+      format: fmt as SearchOpts["format"],
       descriptionFormat: descFmt as DescriptionFormat,
-      regions: commaList(flags.region),
+      regions: flags.region ? commaList(flags.region) : flags.thesis ? [...THESIS_DEFAULTS.regions] : [],
       countries: commaList(flags.country),
       cities: commaList(flags.city),
       seniority: commaList(flags.seniority),

@@ -118,7 +118,7 @@ Does this role advance career goals and contain tasks that energize?
 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: paid placement is strongly preferred because it must cover living costs.
-- **Flexibility**: Vienna, Austria is the highest-priority city. Austria, Germany, Switzerland, and remote/hybrid are preferred; other locations only for exceptional opportunities. On-site roles in Austria, Germany, and Switzerland are acceptable. A non-Italian placement needs verified host-country work authorisation.
+- **Flexibility**: Vienna, Austria is the highest-priority city. Austria, Germany, and Switzerland are first priority. The Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, Norway, and remote/hybrid placements are approved secondary markets. On-site roles are acceptable in these markets when the thesis scope and practical arrangements are viable. A non-Italian placement needs verified host-country work authorisation.
 - **Professional development**: practical technical depth, credible company/team, and a thesis that supports a post-graduation technical career.
 
 ### 6. Salary Benchmark (Optional)

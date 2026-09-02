@@ -38,8 +38,8 @@ Secure a paid, English-speaking, degree-integrated Master-thesis internship for 
 ## Preferred Sectors and Locations
 
 - **Sectors:** automotive and aviation are preferred; otherwise open to comparable technically rigorous organisations.
-- **Locations:** Vienna, Austria is the highest priority; then Austria, Germany, and Switzerland. Other locations only for exceptional opportunities.
-- **Work model:** fully remote or hybrid preferred where viable; on-site roles in Austria, Germany, and Switzerland are acceptable.
+- **Locations:** Vienna, Austria is the highest priority; then Austria, Germany, and Switzerland. Approved secondary opportunity markets are the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway.
+- **Work model:** fully remote or hybrid preferred where viable; on-site roles in all priority and secondary markets are acceptable when the project, thesis supervision, and immigration arrangements are viable.
 - **Language:** Albanian (mother tongue), English (C1, TOEFL 107), French (B1), Italian (A2). English is required for the placement.
 - **Compensation:** paid placement strongly preferred.
 
