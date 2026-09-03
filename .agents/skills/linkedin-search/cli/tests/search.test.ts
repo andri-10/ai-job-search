@@ -20,7 +20,7 @@ afterEach(() => {
 
 describe("runSearch", () => {
   test("--limit 0 emits zero results", async () => {
-    globalThis.fetch = (async () => new Response(searchCard("123456", "Engineer"))) as typeof fetch;
+    globalThis.fetch = (async () => new Response(searchCard("123456", "Master Thesis AI Engineer"))) as typeof fetch;
 
     let stdout = "";
     process.stdout.write = ((chunk: string | Uint8Array) => {
@@ -29,7 +29,7 @@ describe("runSearch", () => {
     }) as typeof process.stdout.write;
 
     const code = await runSearch({
-      location: "Copenhagen, Denmark",
+      location: "Vienna, Austria",
       jobage: 9999,
       page: 1,
       limit: 0,

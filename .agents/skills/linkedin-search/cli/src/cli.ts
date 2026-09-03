@@ -1,7 +1,8 @@
 #!/usr/bin/env bun
 // Self-contained CLI for searching jobs on LinkedIn's public jobs-guest endpoints,
-// for any country/region (plus remote). No external CLI framework, so it runs
-// anywhere `bun` is available with zero install beyond the repo clone.
+// for Andri Halili's configured European Master's-thesis markets (plus viable
+// remote roles). No external CLI framework, so it runs anywhere `bun` is
+// available with zero install beyond the repo clone.
 //
 // Personal use only. This reads LinkedIn's public job pages; automated access is
 // against LinkedIn's Terms of Service, so keep volume low and do not use it
@@ -36,16 +37,16 @@ function parseFlags(argv: string[]): Flags {
   return flags
 }
 
-const HELP = `linkedin-cli — search jobs on LinkedIn (any country/region, plus remote)
+const HELP = `linkedin-cli — discover European Master's-thesis opportunities for Andri Halili
 
 USAGE
   bun run src/cli.ts search --location "<place>" [flags]
   bun run src/cli.ts detail <id|url> [--format json|plain]
 
 SEARCH FLAGS
-  --location, -l <text>   Location to search. REQUIRED. e.g. "Mumbai, Maharashtra, India",
-                          "Berlin, Germany", "London, United Kingdom", or "Remote".
-  --query, -q <text>      Keywords (job title, skill, or role). Recommended.
+  --location, -l <text>   Configured market/city. REQUIRED. e.g. "Vienna, Austria",
+                          "Germany", "Switzerland", "Netherlands", or "Remote".
+  --query, -q <text>      Thesis terminology plus technical focus. Recommended.
   --jobage <days>         Posted within N days: 1, 7, 14, 30. Default: all.
   --jobage-minutes <n>    Posted within N minutes (sub-day precision). Conflicts with --jobage.
   --remote <mode>         remote | hybrid | onsite. Filter by workplace type.
@@ -54,12 +55,14 @@ SEARCH FLAGS
   --format <fmt>          json (default) | table | plain.
 
 EXAMPLES
-  bun run src/cli.ts search -q "data engineer" -l "Bengaluru, Karnataka, India" --jobage 30 --format table
-  bun run src/cli.ts search -q "product manager" -l "Berlin, Germany" --remote remote --format table
-  bun run src/cli.ts search -q "paralegal" -l "Remote" --format table
-  bun run src/cli.ts search -q "engineer" -l "Remote" --jobage-minutes 30 --format table
+  bun run src/cli.ts search -q '"master thesis" AI' -l "Vienna, Austria" --jobage 30 --format table
+  bun run src/cli.ts search -q "Masterarbeit machine learning" -l "Germany" --jobage 30 --format table
+  bun run src/cli.ts search -q '"master thesis" software engineering' -l "Switzerland" --jobage 30 --format table
+  bun run src/cli.ts search -q '"thesis internship" backend' -l "European Union" --remote remote --jobage 30 --format table
   bun run src/cli.ts detail 4300011451 --format plain
 
+Use detail before applying the canonical thesis, language, compensation,
+timing, supervision, and work-authorisation gates.
 Personal use only — uses LinkedIn's public pages; keep volume low (LinkedIn ToS).
 `
 
@@ -78,7 +81,7 @@ async function main(): Promise<number> {
     if (!location) {
       process.stderr.write(
         JSON.stringify({
-          error: 'the --location/-l flag is required (e.g. -l "Mumbai, Maharashtra, India", -l "Berlin, Germany", or -l "Remote")',
+          error: 'the --location/-l flag is required (e.g. -l "Vienna, Austria", -l "Germany", -l "Switzerland", or -l "Remote")',
           code: "NO_LOCATION",
         }) + "\n",
       )

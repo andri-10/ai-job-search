@@ -1,42 +1,50 @@
 ---
 name: linkedin-search
-version: 1.0.0
 description: >
-  Use this skill whenever the user wants to search for jobs in any location or
-  market, find job listings, or look up a specific job posting — in any country,
-  city, or remotely. Invoke for open positions, vacancies, and hiring across any
-  sector or role (software, data, design, marketing, finance, legal, operations,
-  etc.). The location is always supplied explicitly by the user. Trigger phrases:
-  find a job, job search, search for jobs, job openings, vacancies, hiring,
-  positions open, remote jobs, "are there any X jobs in <place>", look up this
-  job posting.
-context: fork
-enabled: true  # set to false to keep this portal installed but have /scrape skip it
+  Search LinkedIn's public listings for Andri Halili's paid, English-speaking,
+  degree-integrated Master's-thesis placements in AI, LLMs, machine learning,
+  software/back-end engineering, system design, optimisation, automotive, and
+  aviation across his configured European markets. Use for LinkedIn jobs,
+  thesis internships, Masterarbeit, Abschlussarbeit, stage de fin d'études,
+  afstudeerstage, TFM, graduate thesis, or inspecting a LinkedIn posting.
 allowed-tools: Bash(bun run .agents/skills/linkedin-search/cli/src/cli.ts *)
 ---
 
-# LinkedIn Search Skill
+# LinkedIn Thesis Search
 
-Search live job listings from LinkedIn's public job board for **any country/region**
-(and remote). No authentication, no API key, and **zero runtime dependencies** — it runs
-with just `bun`. The location is always passed explicitly, so the same skill works for a
-forker in any market out of the box.
+Use LinkedIn as a cross-market discovery source for Andri's Master's-thesis search.
+Before searching, read [`../../../CLAUDE.md`](../../../CLAUDE.md) and
+[`../../../.claude/skills/job-scraper/search-queries.md`](../../../.claude/skills/job-scraper/search-queries.md).
+Those files are authoritative for the candidate profile, locations, timing, and screening
+constraints; do not duplicate or silently override them here.
 
-> This is a country-agnostic worked example of the repo's job-portal-skill pattern.
-> LinkedIn's `jobs-guest` endpoints are global and the HTML parsing is country-independent;
-> only the `--location` you pass changes per market.
+The CLI uses LinkedIn's public `jobs-guest` pages with no authentication or API key and
+has zero runtime dependencies beyond Bun. The endpoint is global, but searches must stay
+within the locations and opportunity types configured in the canonical profile.
 
 ## ⚠️ Personal use only
 
 This uses LinkedIn's public job pages; automated access is against LinkedIn's Terms of
-Service, so **keep volume low and don't use it commercially or for bulk data collection.**
+Service, so **keep volume low and do not use it commercially or for bulk collection.**
 Run it on your own responsibility.
 
-## When to use this skill
+## Search workflow
 
-- Search for job openings in a given location (any country/city) or remotely
-- Filter by recency (posted today / last 7 / 14 / 30 days) or workplace type (remote/hybrid/onsite)
-- Get the full description of a specific job listing
+1. Run narrow query/location combinations from the canonical search-query file. Prefer
+   `--jobage 30` for routine monitoring and page 1 before requesting more pages.
+2. Search English thesis terms and the relevant local synonym in separate passes. Useful
+   synonyms include `Masterarbeit`, `Abschlussarbeit`, `stage de fin d'études`,
+   `afstudeerstage`, `diplomityö`, `opinnäytetyö`, and `TFM`.
+3. Retrieve `detail` for every plausible result before judging fit. Search cards do not
+   establish thesis scope, language, compensation, dates, or work-authorisation viability.
+4. Apply every hard gate from the canonical profile: degree-integrated individual thesis
+   scope, required duration and timing, English working language, compensation viability,
+   supervision, and destination-country authorisation. Do not call a role application-ready
+   when one of these remains contradicted or unknown.
+5. Prioritise AI/LLMs, applied machine learning, software/back-end engineering, system
+   design, and optimisation, especially in automotive and aviation. Do not reject another
+   rigorous technical sector solely because it is outside those preferred industries.
+6. Deduplicate by LinkedIn job ID and canonical job URL before handing results to ranking.
 
 ## Commands
 
@@ -47,13 +55,14 @@ bun run .agents/skills/linkedin-search/cli/src/cli.ts search --location "<place>
 ```
 
 Key flags:
-- `--location <text>` / `-l <text>` — **required.** A LinkedIn place string, e.g. `"Mumbai, Maharashtra, India"`, `"Berlin, Germany"`, `"London, United Kingdom"`, or `"Remote"`.
-- `--query <text>` / `-q <text>` — keyword search (title, skill, role). Recommended.
-- `--jobage <days>` — posted within N days: `1`, `7`, `14`, `30`. Omit for all postings.
-- `--jobage-minutes <n>` — posted within N minutes (sub-day precision, e.g. `30`). Conflicts with `--jobage` — pass only one.
-- `--remote <mode>` — `remote`, `hybrid`, or `onsite` (workplace-type filter).
-- `--page <n>` — page number (1-indexed, 10 results per page).
-- `--limit <n>` / `-n <n>` — cap total results emitted (client-side).
+
+- `--location <text>` / `-l <text>` — **required.** Use a configured market, such as `"Vienna, Austria"`, `"Germany"`, `"Switzerland"`, `"Netherlands"`, or `"Remote"`.
+- `--query <text>` / `-q <text>` — thesis terminology plus technical focus. Recommended.
+- `--jobage <days>` — posted within N days. Prefer `30` for routine monitoring.
+- `--jobage-minutes <n>` — sub-day precision. Conflicts with `--jobage`.
+- `--remote <mode>` — `remote`, `hybrid`, or `onsite`.
+- `--page <n>` — 1-indexed page; LinkedIn returns 10 results per page.
+- `--limit <n>` / `-n <n>` — client-side result cap.
 - `--format json|table|plain` — default `json`.
 
 ### Fetch full job detail
@@ -62,42 +71,47 @@ Key flags:
 bun run .agents/skills/linkedin-search/cli/src/cli.ts detail <id|url> [--format json|plain]
 ```
 
-`id` is the job ID from `search` results (e.g. `4426311357`). You may also pass a full
-LinkedIn `jobs/view/...` URL or a `urn:li:jobPosting:...` URN. Returns the full description,
-seniority, employment type, job function, industries, and apply link.
+Accept a numeric LinkedIn job ID, full `jobs/view/...` URL, or
+`urn:li:jobPosting:...` URN. Detail returns the description, seniority, employment
+type, job function, industries, and apply link.
 
-## Usage examples
+## Candidate-focused examples
 
 ```bash
-# Data engineer roles in Bengaluru, last 30 days
-bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "data engineer" -l "Bengaluru, Karnataka, India" --jobage 30 --format table
+# Highest-priority market: applied AI thesis work in Vienna
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q '"master thesis" AI' -l "Vienna, Austria" --jobage 30 --format table
 
-# Product manager roles in Berlin, remote
-bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "product manager" -l "Berlin, Germany" --remote remote --format table
+# German local terminology for machine-learning thesis placements
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Masterarbeit machine learning" -l "Germany" --jobage 30 --format table
 
-# Any role, fully remote
-bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "paralegal" -l "Remote" --format table
+# Software and systems thesis opportunities in Switzerland
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q '"master thesis" software engineering' -l "Switzerland" --jobage 30 --format table
 
-# Engineer roles, remote, posted in the last 30 minutes
-bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "engineer" -l "Remote" --jobage-minutes 30 --format table
+# Thesis-compatible back-end work across remote Europe
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q '"thesis internship" backend' -l "European Union" --remote remote --jobage 30 --format table
 
-# Full details for a specific job
+# Inspect the complete posting before applying the thesis and language gates
 bun run .agents/skills/linkedin-search/cli/src/cli.ts detail 4426311357 --format plain
 ```
 
 ## Output formats
 
 | Format | Best for |
-|--------|----------|
-| `json` | Default — programmatic use, passing IDs to `detail` |
-| `table` | Quick human-readable scanning |
-| `plain` | Reading a single job's full detail (`detail` command) |
+|---|---|
+| `json` | Programmatic use, deduplication, and downstream ranking |
+| `table` | Quick review of search cards |
+| `plain` | Reading search results or a full posting |
 
-All errors are written to **stderr** as `{ "error": "...", "code": "..." }` and the process exits with code `1`.
+All errors go to **stderr** as `{ "error": "...", "code": "..." }` with exit code `1`.
 
 ## Notes
 
-- Data is from LinkedIn's public `jobs-guest` endpoints — no credentials required.
-- Page size is fixed at 10 results per page.
-- LinkedIn may rate-limit; the CLI retries 429/5xx with exponential backoff. Keep volume low (see ToS note above).
-- Job IDs are numeric (e.g. `4426311357`) — pass them as-is to `detail`.
+- LinkedIn is a discovery source, not evidence that a posting is thesis-compatible. Never
+  infer compensation, working language, supervision, academic approval, or immigration
+  eligibility when the full posting does not state it.
+- A generic internship, working-student role, research-assistant role, or graduate job is
+  retained only when its scope and timing could credibly become the required thesis placement.
+- LinkedIn keyword matching is fuzzy and may return ordinary full-time roles that do not
+  contain the thesis term. Treat these as false positives unless detail proves compatibility.
+- Page size is fixed at 10. The CLI retries 429/5xx responses with exponential backoff.
+- Use the numeric job ID from search results with `detail`.

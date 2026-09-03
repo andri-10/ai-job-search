@@ -1,61 +1,68 @@
 # linkedin-cli
 
-CLI for searching jobs on LinkedIn's public job listings, for **any country/region**
-(and remote), across any sector.
+CLI for discovering LinkedIn postings relevant to Andri Halili's paid,
+English-speaking, degree-integrated Master's-thesis search across his configured
+European markets.
 
-**Data source**: LinkedIn `jobs-guest` endpoints (`seeMoreJobPostings/search` and `jobPosting/<id>`).
-**Authentication**: None required.
-**Dependencies**: None (plain `bun` + `fetch`). `bun install` is optional and only pulls dev type defs.
+- **Data source:** LinkedIn public `jobs-guest` search and detail endpoints
+- **Authentication:** none
+- **Runtime dependencies:** none; plain Bun and `fetch`
+- **Use:** personal, low-volume discovery only
 
-> **Personal use only.** This uses LinkedIn's public job pages; automated access is against
-> LinkedIn's Terms of Service. Keep volume low, don't use it commercially or for bulk data
-> collection, and run it on your own responsibility.
+Automated access is against LinkedIn's Terms of Service. Do not use this CLI for
+commercial or bulk collection.
 
 ## Installation
 
 ```bash
 cd .agents/skills/linkedin-search/cli
-bun install   # optional — only installs TypeScript dev types
+bun install
 ```
 
-The CLI runs without any install because it has zero runtime dependencies.
+Installation is optional for runtime use and only installs TypeScript development types.
 
 ## Commands
 
 | Command | Description |
-|---------|-------------|
-| `search` | Search for job listings (`--location` required) |
-| `detail` | Fetch full detail for a single job listing |
+|---|---|
+| `search` | Search public listings; `--location` is required |
+| `detail` | Fetch the complete public detail for one job ID or URL |
 
-`search` accepts `--format json|table|plain` (default `json`); `detail` accepts `--format json|plain`.
-All errors are written to **stderr** as `{ "error": "...", "code": "..." }` with exit code `1`.
-
-## Quick examples
+## Candidate-focused examples
 
 ```bash
-# Software roles in Hyderabad, last 7 days
-bun run src/cli.ts search -q "backend engineer" -l "Hyderabad, Telangana, India" --jobage 7 --format table
+# Applied AI thesis placements in Vienna
+bun run src/cli.ts search -q '"master thesis" AI' -l "Vienna, Austria" --jobage 30 --format table
 
-# Design roles in London
-bun run src/cli.ts search -q "product designer" -l "London, United Kingdom" --format table
+# German-language thesis terminology
+bun run src/cli.ts search -q "Masterarbeit machine learning" -l "Germany" --jobage 30 --format table
 
-# Fully remote
-bun run src/cli.ts search -q "technical writer" -l "Remote" --remote remote --format table
+# Software thesis work in Switzerland
+bun run src/cli.ts search -q '"master thesis" software engineering' -l "Switzerland" --jobage 30 --format table
 
-# Full detail for one job
+# Remote back-end thesis opportunities in Europe
+bun run src/cli.ts search -q '"thesis internship" backend' -l "European Union" --remote remote --jobage 30 --format table
+
+# Inspect one complete posting before screening it
 bun run src/cli.ts detail 4426311357 --format plain
 ```
-
-See `../SKILL.md` for the full flag reference and the Terms-of-Service note.
 
 ## Search flags
 
 | Flag | Alias | Description |
-|------|-------|-------------|
-| `--location` | `-l` | **Required.** Place string, e.g. `"Mumbai, Maharashtra, India"`, `"Berlin, Germany"`, `"Remote"`. |
-| `--query` | `-q` | Keywords (title / skill / role). Recommended. |
-| `--jobage` | | Posted within N days: `1`, `7`, `14`, `30`. |
-| `--remote` | | `remote` \| `hybrid` \| `onsite`. |
-| `--page` | | 1-indexed page (10 results/page). |
-| `--limit` | `-n` | Cap results emitted. |
-| `--format` | | `json` \| `table` \| `plain`. |
+|---|---|---|
+| `--location` | `-l` | **Required.** Configured market/city such as `Vienna, Austria`, `Germany`, `Switzerland`, or `Remote`. |
+| `--query` | `-q` | Thesis terminology plus technical focus. |
+| `--jobage` | | Posted within N days; 30 is the routine-monitoring default used by the workflow. |
+| `--jobage-minutes` | | Sub-day freshness; conflicts with `--jobage`. |
+| `--remote` | | `remote`, `hybrid`, or `onsite`. |
+| `--page` | | 1-indexed page; 10 results per page. |
+| `--limit` | `-n` | Client-side result cap. |
+| `--format` | | `json`, `table`, or `plain`. |
+
+Search output is discovery data, not a fit decision. Retrieve the full posting with
+`detail`, then apply the thesis, English-language, compensation, timing, supervision,
+and destination-country authorisation checks in `../SKILL.md`.
+
+All errors are written to stderr as JSON with exit code `1`. Endpoint and parser
+details are maintained in `../url-reference.md`.

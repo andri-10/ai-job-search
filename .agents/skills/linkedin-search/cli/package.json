@@ -1,7 +1,7 @@
 {
   "name": "linkedin-cli",
   "version": "1.0.0",
-  "description": "CLI for searching jobs on LinkedIn's public job listings, for any country/region (and remote) — no authentication, zero runtime dependencies. Personal use only (LinkedIn ToS).",
+  "description": "CLI for Andri Halili's European Master's-thesis internship discovery through LinkedIn public listings. No authentication or runtime dependencies; personal use only.",
   "type": "module",
   "main": "src/cli.ts",
   "bin": {
