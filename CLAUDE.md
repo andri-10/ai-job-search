@@ -35,29 +35,35 @@ This repo is a Master-thesis internship workspace. It supports finding, evaluati
 ### Education
 <!-- List your degrees, most recent first -->
 - **European Master in Sustainable Systems Engineering (Erasmus Mundus Joint Master)** (2025-2027; expected graduation around September 2027) - UTC Compiegne, Polytechnic University of Tirana, and Universita degli Studi di Genova
-  - M2S1: University of Genoa, September 2026-February 2027
-  - Master thesis: degree-integrated internship, approximately March-August/September 2027; 30 ECTS; 22-26 weeks
+  - M1S1: Université de Technologie de Compiègne, France; 9/9 graded courses at A, the maximum grade
+  - M1S2: Polytechnic University of Tirana, Albania; GPA 9.3/10
+  - M2S1: University of Genoa, September 2026-January 2027
+  - Master thesis: degree-integrated internship, planned February/March-September 2027; 30 ECTS; 22-26 weeks
   - Topics: AI/LLMs, software engineering, back-end development, system design, and optimisation
-  - Academic results: 4.0/4.0 GPA in the UTC first semester; 9.4/10 GPA in the Tirana second semester
+- **Bachelor of Engineering in Computer Engineering** (October 2022-July 2025) - Polytechnic University of Tirana
+  - Final GPA: 9.7/10
+  - Thesis: *Intelligent Motion-Based Quiz System Using Micro:bit and PDF Document Processing*
 
 ### Professional Experience
-- **Full Stack Developer** (September 2025 - Present) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
-  - Contribute to a Volkswagen Group car-parts application used by repair shops to identify vehicles by VIN and order parts.
-  - Develop and maintain Java Spring Boot backend services and RESTful APIs; collaborate on feature delivery, issue resolution, and backend performance.
-- **Backend Developer Intern (Java Spring Boot)** (March 2025 - August 2025) - **Lufthansa Industry Solutions**, Tirana, Albania (On-site)
-  - Developed Java Spring Boot backend services and RESTful APIs for internal enterprise applications.
-  - Designed and integrated MySQL data layers using Hibernate/JPA.
-- **SAP Application Support Engineer** (March 2023 - August 2025) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
-  - Supported SAP ERP users, managed OTRS ticket queues, documented issue resolution, and helped troubleshoot complex issues.
+- **Software Engineer** (March 2026 - Present) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
+  - Implement backend feature and bug stories in two-week sprints for a Volkswagen Group car-parts platform used by repair shops to identify vehicles by VIN and order parts.
+  - Develop and maintain Java/Spring Boot services and REST APIs, including persistence and database-layer work.
+  - Troubleshoot GitHub Actions workflows, deploy changes on AWS, validate database connections, and coordinate changes with frontend developers.
+  - Contribute in Scrum ceremonies, architecture sessions, sprint reviews, and solution proposals before implementation.
+- **SAP Application Support Engineer** (May 2023 - March 2026) - **Lufthansa Industry Solutions**, Tirana, Albania (Hybrid)
+  - Supported enterprise SAP applications for Lufthansa-related accounts, including user maintenance, access administration, and incident resolution through ticketing systems.
+  - Worked with OTRS and operational support processes; documented resolutions, collaborated across teams, and supported onboarding and recurring account-maintenance activities.
+- **Internal Java Internship** (July 2025 - September 2025) - **Lufthansa Industry Solutions**, Tirana, Albania
+  - Completed an after-hours enterprise Java curriculum alongside the SAP role, covering OOP, JDBC, JPA/Hibernate, Spring/Spring Boot, REST services, Spring Security, testing, Docker/Kubernetes, and cloud fundamentals.
 - **Programming Instructor (C Language)** (2025) - **Plato.al**, Albania (Contract/Freelance, Remote)
   - Designed a structured C programming course with practical exercises.
 
 ### Technical Skills
 - **Primary interests:** AI/LLMs, software engineering, back-end development, system design, optimisation
-- **Backend:** Java, Spring Boot, REST APIs, Hibernate, JPA, JDBC, WebSockets; Python and Flask
+- **Backend:** Java, Spring Boot, REST APIs, JDBC, JPA/Hibernate, Spring Data JPA, WebSockets, Maven, JUnit/Mockito, Swagger; Python and Flask
 - **Databases:** MySQL, MongoDB, Oracle PL/SQL, SQLite
-- **DevOps and tools:** Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS
-- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), PHP
+- **DevOps and tools:** AWS deployments, Docker, GitHub Actions/CI/CD, Git, Linux (Ubuntu), Agile/Scrum delivery, Kubernetes fundamentals
+- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), Angular working exposure, PHP
 - **Systems / ML:** OS fundamentals, OpenMP, MPI, TCP/IP, HTTP, UDP, NumPy, model training, ONNX, ROS2, Jetson Orin, Arduino, PLC
 - **AI-assisted development:** OpenAI Codex, GitHub Copilot, agent skills/workflows, AI-supported research and implementation
 - **Verified delivery experience:** Volkswagen Group automotive application; Pilates Studio website (bstudio.al: responsive pages, services, reservations, contact); Café and Brunch website (joicafe.de: responsive reservations, category-based menu, animations, photos, contact); warehouse, gym-membership, Micro:bit quiz, embedded pose-estimation, and Oracle database projects
@@ -70,7 +76,7 @@ This repo is a Master-thesis internship workspace. It supports finding, evaluati
 - No publications confirmed yet.
 
 ### Awards
-- Academic results: 4.0/4.0 GPA in the UTC first semester; 9.4/10 GPA in the Tirana second semester.
+- Academic results: 9/9 graded courses at A, the maximum grade, in the UTC first semester; 9.3/10 GPA in the Tirana second semester; 9.7/10 final Bachelor's GPA.
 
 ### Behavioral Profile
 Pending candidate self-assessment or CV/LinkedIn evidence.

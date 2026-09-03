@@ -29,18 +29,19 @@ framework_version: 1.2.0
 
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
-| European Master in Sustainable Systems Engineering (Erasmus Mundus Joint Master) | 2025-2027 (expected graduation around September 2027) | UTC Compiegne; Polytechnic University of Tirana; Universita degli Studi di Genova | Sustainable systems engineering; upcoming specialisation and individual thesis internship |
+| European Master in Sustainable Systems Engineering (Erasmus Mundus Joint Master) | September 2025-September 2027 (expected) | Université de Technologie de Compiègne; Polytechnic University of Tirana; University of Genoa | Sustainable systems engineering; individual industrial Master-thesis internship |
 | Bachelor of Engineering in Computer Engineering | October 2022 - July 2025 | Polytechnic University of Tirana | Data structures and algorithms; software engineering; Java, Python, and C programming; Oracle SQL; computer networks; applied mathematics. Final grade: 9.7/10. |
 
 ### Programme Mobility and Thesis Timeline
-- **M1 completed / in progress:** first semester at UTC Compiègne, France; second semester at the Polytechnic University of Tirana, Albania.
-- **M2S1:** Universita degli Studi di Genova, Italy, September 2026-February 2027.
-- **M2S2:** individual Master-thesis internship, approximately March-August/September 2027.
+- **M1S1:** Université de Technologie de Compiègne, France; 9/9 graded courses at A, the maximum grade.
+- **M1S2:** Polytechnic University of Tirana, Albania; GPA 9.3/10.
+- **M2S1:** University of Genoa, Italy, September 2026-January 2027.
+- **M2S2:** individual industrial Master-thesis internship, planned February/March-September 2027.
 - **Thesis load:** 30 ECTS; EMSSE lists a 22-26 week Master-thesis internship.
 - **Thesis format:** an individual thesis produced through the final internship.
 - **Supervision:** to be arranged later in Genoa. EMSSE specifies a responsible EU higher-education institution plus an additional tutor from another EMSSE institution.
 - **Confidentiality, publication, and IP:** not yet confirmed. Any company thesis must remain examinable and defensible under EMSSE/University of Genoa rules.
-- **Academic results:** 4.0/4.0 GPA in the first semester at UTC Compiegne; 9.4/10 GPA in the second semester at the Polytechnic University of Tirana.
+- **Academic results:** 9/9 graded courses at A, the maximum grade, in the first semester at UTC Compiègne; 9.3/10 GPA in the second semester at the Polytechnic University of Tirana.
 - **Master's coursework:** machine learning, stochastic modeling, applied statistics, systems theory, and practical AI applications.
 - **Bachelor thesis:** *Intelligent Motion-Based Quiz System Using Micro:bit and PDF Document Processing*.
 
@@ -69,22 +70,21 @@ framework_version: 1.2.0
 
 ## Professional Experience
 
-### Full Stack Developer - Lufthansa Industry Solutions (September 2025 - Present)
+### Software Engineer - Lufthansa Industry Solutions (March 2026 - Present)
 Tirana, Albania | Hybrid
-- Contribute to the development and maintenance of a Volkswagen Group car-parts application used by repair shops to identify vehicles by VIN and order required parts.
-- Develop and maintain Java Spring Boot backend services and RESTful APIs for application functionality.
-- Collaborate with cross-functional teams to deliver features, resolve issues, and improve backend performance.
+- Implement backend feature and bug stories in two-week sprints for a Volkswagen Group car-parts platform used by repair shops to identify vehicles by VIN and order parts.
+- Develop and maintain Java/Spring Boot services and REST APIs, including persistence and database-layer work.
+- Troubleshoot GitHub Actions workflows, deploy changes on AWS, validate database connections, and coordinate changes with frontend developers.
+- Contribute in Scrum ceremonies, architecture sessions, sprint reviews, and solution proposals before implementation.
 
-### Backend Developer Intern (Java Spring Boot) - Lufthansa Industry Solutions (March 2025 - August 2025)
-Tirana, Albania | On-site
-- Developed backend services using Java Spring Boot and RESTful APIs for internal enterprise applications.
-- Designed and integrated MySQL data layers using Hibernate/JPA for efficient data management.
-
-### SAP Application Support Engineer - Lufthansa Industry Solutions (March 2023 - August 2025)
+### SAP Application Support Engineer - Lufthansa Industry Solutions (May 2023 - March 2026)
 Tirana, Albania | Hybrid
-- Provided technical support for SAP ERP systems, resolved user issues, and maintained system functionality.
-- Managed OTRS ticket queues, ensuring timely resolution and appropriate documentation.
-- Collaborated with teams to troubleshoot complex issues and support onboarding of new members.
+- Supported enterprise SAP applications for Lufthansa-related accounts, including user maintenance, access administration, and incident resolution through ticketing systems.
+- Worked with OTRS and operational support processes; documented resolutions, collaborated across teams, and supported onboarding and recurring account-maintenance activities.
+
+### Internal Java Internship - Lufthansa Industry Solutions (July 2025 - September 2025)
+Tirana, Albania | After-hours programme completed alongside the SAP role
+- Completed an enterprise Java curriculum covering OOP, JDBC, JPA/Hibernate, Spring/Spring Boot, REST services, Spring Security, testing, Docker/Kubernetes, and cloud fundamentals.
 
 ### Programming Instructor (C Language) - Plato.al (2025)
 Albania | Contract/Freelance, Remote
@@ -121,9 +121,9 @@ https://github.com/andri-10/parking-database
 ## Technical Skills
 
 ### Programming & ML
-- **Java:** Spring Boot, REST APIs, Hibernate, JPA, JDBC.
+- **Java:** Spring Boot, REST APIs, JDBC, JPA/Hibernate, Spring Data JPA, WebSockets, Maven, JUnit/Mockito, Swagger.
 - **Python:** Flask, NumPy.
-- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), PHP, WebSockets.
+- **Web:** HTML, CSS, JavaScript, TypeScript, React (basic SPA development), Angular working exposure, PHP.
 - **Databases:** MySQL, MongoDB; Oracle PL/SQL (DDL, DML, triggers, procedures); SQLite.
 - **ML and embedded systems:** NumPy, model training, ONNX, performance evaluation, ROS2, Jetson Orin, Arduino, PLC.
 
@@ -134,7 +134,7 @@ https://github.com/andri-10/parking-database
 - Aviation is a target sector, not yet asserted as a direct experience domain.
 
 ### Software & Tools
-- Docker, Git, Linux (Ubuntu), CI/CD workflows, AWS.
+- AWS deployments, Docker, GitHub Actions/CI/CD, Git, Linux (Ubuntu), Agile/Scrum delivery, Kubernetes fundamentals.
 - AI-assisted development: OpenAI Codex, GitHub Copilot, agent skills/workflows, AI-supported research and implementation.
 - System engineering foundations: operating systems, concurrency (OpenMP, MPI), and networking fundamentals (TCP/IP, HTTP, UDP).
 
