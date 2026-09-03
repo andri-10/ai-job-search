@@ -2,7 +2,7 @@
 
 ## Search Scope
 
-Seek **paid, English-speaking, degree-integrated Master-thesis internships** for approximately March-August/September 2027. Prioritise Vienna, Austria first, then Germany and Switzerland. Also search the approved secondary markets: the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway, plus fully remote or hybrid opportunities where a meaningful company placement, supervision, and legal work arrangement are possible. On-site opportunities in these markets are acceptable.
+Seek **paid, English-speaking, degree-integrated Master-thesis internships** for approximately March-August/September 2027. Prioritise Vienna, Austria first, then Germany and Switzerland. Also search the approved secondary markets: the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, Norway, and Spain, plus fully remote or hybrid opportunities where a meaningful company placement, supervision, and legal work arrangement are possible. On-site opportunities in these markets are acceptable.
 
 The candidate is an Albanian citizen planning an Italian student residence permit for September 2026–September 2027. For placements outside Italy, do not assume work authorisation: surface the host-country permit requirement clearly.
 
@@ -64,8 +64,22 @@ site:jobs.* "master thesis" software aviation Germany
 "master thesis" software internship Italy English
 "master thesis" AI internship Sweden English
 "master thesis" software engineering Finland English
+"Master's thesis worker" machine learning Finland
+"research assistant" "master thesis" AI Finland English
+"diplomityö" tekoäly Finland
+"opinnäytetyö" ohjelmistokehitys Finland
 "master thesis" internship Luxembourg English
+site:uni.lu/snt-en "Master Thesis" AI
+site:uni.lu/snt-en "Master Thesis" "Natural Language Processing"
+site:uni.lu/snt-en "Master Thesis" software security
+"stage de fin d'études" informatique Luxembourg English
 "master thesis" AI internship Norway English
+"master thesis" AI internship Spain English
+"prácticas TFM" inteligencia artificial España
+"trabajo fin de máster" ingeniería de software España
+"proyecto fin de máster" optimización España
+"prácticas curriculares" machine learning España English
+site:empleate.gob.es/empleo "prácticas" "inteligencia artificial"
 ```
 
 ## Required Screening Checks

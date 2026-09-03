@@ -12,7 +12,7 @@ This repo is a Master-thesis internship workspace. It supports finding, evaluati
 
 ### Identity
 - **Name:** Andri Halili
-- **Location:** Tirana, Albania until September 2026; Genoa, Italy from September 2026. Austria, Germany, and Switzerland remain first priority for the final placement. Secondary opportunity markets are the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway, plus remote/hybrid roles where legally and academically viable.
+- **Location:** Tirana, Albania until September 2026; Genoa, Italy from September 2026. Austria, Germany, and Switzerland remain first priority for the final placement. Secondary opportunity markets are the Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, Norway, and Spain, plus remote/hybrid roles where legally and academically viable.
 - **Languages:**
   | Language | Level |
   |----------|-------|

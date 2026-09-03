@@ -14,7 +14,7 @@ framework_version: 1.2.0
 - **Status:** Erasmus Mundus Joint Master student
 - **Citizenship:** Albanian
 - **Residence / work-authorisation context:** Italian student visa/residence permit planned for September 2026 to September 2027. A separate destination-country internship/work authorisation may be required outside Italy; verify per host country before applying.
-- **Constraints:** English-speaking placement required. Paid placement strongly preferred to cover living costs. Austria, Germany, and Switzerland are first-priority locations. The Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, and Norway are approved secondary opportunity markets; fully remote or hybrid work is preferred where academically and legally feasible. Any placement outside Italy needs country-specific authorisation verification before applying.
+- **Constraints:** English-speaking placement required. Paid placement strongly preferred to cover living costs. Austria, Germany, and Switzerland are first-priority locations. The Netherlands, France, Northern Italy, Sweden, Finland, Luxembourg, Norway, and Spain are approved secondary opportunity markets; fully remote or hybrid work is preferred where academically and legally feasible. Any placement outside Italy needs country-specific authorisation verification before applying.
 
 ### Languages
 
